@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "verdana";
 }
 
@@ -9,12 +9,37 @@ body{
     height: 300px !important;
 }
 
-.texto_ppal{
+.banner-content{
+    margin-top: 50px;
+}
+
+.bg-col-und {
+    background: #005883 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+     color: #fff !important;
+}
+    
+.texto_ppal {
     color: #fff;
     font-size: 50px;
     text-shadow: 5px 5px 10px white;
     width: 100%;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .texto_ppal {
+        font-size: 40px;
+    }
+    .banner{
+         max-height: 150px !important;
+        height: 150px !important;
+    }
+    .banner-content{
+        margin-top: 10px;;
+    }
 }
 
 .caja_lecturas {
@@ -32,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-.caja_lecturas a{
+.caja_lecturas a {
     color: #fff;
     text-decoration: none;
 }
@@ -42,13 +67,14 @@ body{
     font-weight: 700;
 }
 
-.logo{
+.logo {
+    color: #fff !important;
     font-size: 18px;
     font-weight: 600;
-    text-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
 
-footer{
+footer {
     text-align: center;
     background: #005883;
     color: #fff;
