@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administracion de base de datos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+    <section class="banner">
+        <div class="container">
+            <div class="row fullscreen d-flex align-items-center">
+                <div class="banner-content col-lg-12 col-md-12 justify-content-center mt-5">
+                    <h1 class="texto_ppal" style="">Administración de Base de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="index.html" class="navbar-brand logo">UNAD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav">
+                           <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="lecturas.html">LECTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="multimedia.html">MULTIMEDIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="actividades.html">ACTIVIDADES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="autores.html">AUTORES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="container" style="margin-top: 80px; margin-bottom: 20px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header" style="background: #005883; color: #fff;">
+                            <strong>LECTURAS</strong>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> <a href="sistemas-de-gesti%C3%B3n-de-base-de-datos.html"><span>SISTEMAS DE GESTIÓN </span> DE BASE DE DATOS (SGBD)</a></li>
+                            <li class="list-group-item"><a href="fundamentos-de-an%C3%A1lisis-y-dise%C3%B1o-de-bases-de-datos-relacional.html"><span>FUNDAMENTOS DE ANÁLISIS Y DISEÑO </span> DE BASES DE DATOS RELACIONAL</a></li>
+                            <li class="list-group-item"><a href="lenguaje-estandar-de-consulta-y-herramientas.html"><span>LENGUAJE ESTANDAR DE CONSULTA</span> Y HERRAMIENTAS</a></li>
+                            <li class="list-group-item"><a href="lenguaje-de-manipulacion-de-datos.html"><span>LENGUAJE DE MANIPULACIÓN DE DATOS</span></a></li>
+                            <li class="list-group-item"><a href="herramienta-mysql.html"><span>HERRAMIENTA MySQL</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-9" style="text-align: justify">
+                <h3>SISTEMAS DE GESTIÓN DE BASE DE DATOS (SGBD)</h3>
+                <p>
+                    Los SGBD son paquetes de software muy complejos y sofisticados que deben proporcionar los servicios para el buen funcionamiento de la base de datos. No se puede generalizar sobre los elementos que componen un SGBD ya que varían mucho unos de otros. Sin embargo, es muy útil conocer sus componentes y cómo se relacionan cuando se trata de comprender lo que es un sistema de bases de datos. <br><br> 1. Un SGBD debe proporcionar a los usuarios la capacidad de almacenar datos en la base de datos, acceder a ellos y actualizarlos. Esta es la función fundamental de un SGBD y por supuesto, el SGBD debe ocultar al usuario la estructura física interna (la organización de los ficheros y las estructuras de almacenamiento).<br><br> 2. Un SGBD debe proporcionar un catálogo en el que se almacenen las descripciones de los datos y que sea accesible por los usuarios. Este catálogo es lo que se denomina diccionario de datos y contiene información que describe los datos de la base de datos (metadatos). Normalmente, un diccionario de datos almacena: Nombre, tipo y tamaño de los datos.<br></p>
+                <ul>
+                    <li>Nombre de las relaciones entre los datos.</li>
+                    <li>Restricciones de integridad sobre los datos.</li>
+                    <li>Nombre de los usuarios autorizados a acceder a la base de datos.</li>
+                    <li>Esquema externo, conceptual e interno, y correspondencia entre los esquemas.</li>
+                    <li>Estadísticas de utilización, tales como la frecuencia de las transacciones y el número de accesos realizados a los objetos de la base de datos.</li>
+                </ul>
+
+                <p>
+                    3. Un SGBD debe proporcionar un mecanismo que garantice que todas las actualizaciones correspondientes a una determinada transacción se realicen, o que no se realice ninguna. Una transacción es un conjunto de acciones que cambian el contenido de la base de datos. Una transacción en el sistema informático de la empresa inmobiliaria sería dar de alta a un empleado o eliminar un inmueble. Una transacción un poco más complicada sería eliminar un empleado y reasignar sus inmuebles a otro empleado. En este caso hay que realizar varios cambios sobre la base de datos. Si la transacción falla durante su realización, por ejemplo, porque falla el hardware, la base de datos quedará en un estado inconsistente. Algunos de los cambios se habrán hecho y otros no, por lo tanto, los cambios realizados deberán ser deshechos para devolver la base de datos a un estado consistente.<br><br> 4. Un SGBD debe proporcionar un mecanismo que asegure que la base de datos se actualice correctamente cuando varios usuarios la están actualizando concurrentemente. Uno de los principales objetivos de los SGBD es el permitir que varios usuarios tengan acceso concurrente a los datos que comparten. El acceso concurrente es relativamente fácil de gestionar si todos los usuarios se dedican a leer datos, ya que no pueden interferir unos con otros. Sin embargo, cuando dos o más usuarios están accediendo a la base de datos y al menos uno de ellos está actualizando datos, pueden interferir de modo que se produzcan inconsistencias en la base de datos. El SGBD se debe encargar de que estas interferencias no se produzcan en el acceso simultáneo.<br><br> 5. Un SGBD debe proporcionar un mecanismo capaz de recuperar la base de datos en caso de que ocurra algún suceso que la dañe. Como se ha comentado antes, cuando el sistema falla en medio de una transacción, la base de datos se debe devolver a un estado consistente. Este fallo puede ser a causa de un fallo en algún dispositivo hardware o un error del software, que hagan que el SGBD aborte, o puede ser a causa de que el usuario detecte un error durante la transacción y la aborte antes de que finalice. En todos estos casos, el SGBD debe proporcionar un mecanismo capaz de recuperar la base de datos llevándola a un estado consistente.<br><br> 6. Un SGBD debe proporcionar un mecanismo que garantice que sólo los usuarios autorizados pueden acceder a la base de datos. La protección debe ser contra accesos no autorizados, tanto intencionados como accidentales.<br><br> 7. Un SGBD debe ser capaz de integrarse con algún software de comunicación. Muchos usuarios acceden a la base de datos desde terminales. En ocasiones estos terminales se encuentran conectados directamente a la máquina sobre la que funciona el SGBD. En otras ocasiones los terminales están en lugares remotos, por lo que la comunicación con la máquina que alberga al SGBD se debe hacer a través de una red. En cualquiera de los dos casos, el SGBD recibe peticiones en forma de mensajes y responde de modo similar. Todas estas transmisiones de mensajes las maneja el gestor de comunicaciones de datos. Aunque este gestor no forma parte del SGBD, es necesario que el SGBD se pueda integrar con él para que el sistema sea comercialmente viable.<br><br> 8. Un SGBD debe proporcionar los medios necesarios para garantizar que tanto los datos de la base de datos, como los cambios que se realizan sobre estos datos, sigan ciertas reglas. La integridad de la base de datos requiere la validez y consistencia de los datos almacenados. Se puede considerar como otro modo de proteger la base de datos, pero además de tener que ver con la seguridad, tiene otras implicaciones. La integridad se ocupa de la calidad de los datos. Normalmente se expresa mediante restricciones, que son una serie de reglas que la base de datos no puede violar. Por ejemplo, se puede establecer la restricción de que cada empleado no puede tener asignados más de diez inmuebles. En este caso sería deseable que el SGBD controlara que no se sobrepase este límite cada vez que se asigne un inmueble a un empleado. <br><br>
+
+                    <b>Planificación de proyectos de análisis, diseño e implementación de bases de datos</b><br><br> Para la planificación de un proyecto de análisis, diseño e implementación de bases de datos, es necesario tener claro el área de la organización que se desea estudiar, pues éstas deben tener un contexto delimitado. Una vez definido lo anterior, se debe planifica todo lo concerniente al levantamiento de información, pues en ésta, la participación del usuario es de vital importancia; lo mismo que la documentación de políticas y normas que tiene la organización, en el área bajo estudio. Con respecto al análisis, este se realizará con la técnica Entidad Relación, con base al levantamiento de información. El diagrama resultante, debe estar avalado por el área usuaria, que en última instancia es el modelo lógico de datos. En cuanto al diseño físico, es el resultado de pasar el modelo lógico de datos a tablas, con sus respectivos llaves principales y llaves foráneas. Por último, la implementación del diseño físico se realizará en la herramienta MySql (SGBD). <br><br> a) Levantamiento de información Para desarrollar esta fase del proyecto, se recomienda que se recolecte la información a través de entrevistas y recolección de formatos que se manejen en el área. Para el caso de las entrevistas, se recomienda seguir los siguientes pasos: <br><br> - Seleccionar los diferentes procesos que tiene el área bajo estudio.<br> - Seleccionar las personas que mejor conocen los anteriores procesos.<br> - Realizar con las personas anteriores, el cronograma para la realización de la entrevista.<br> - Realizar la entrevista, ésta no debe durar más de dos horas, si esto ocurre, se debe realizar en otra sesión.<br> - Editar la entrevista. Por lo general, la edición toma el doble de tiempo que duró la entrevista. Aquí, se debe quitar todos los saludos, palabras o frases que no tenga que ver con el tema.<br> - Validación de la entrevista: Aquí, se envía al usuario el texto de la entrevista, con el fin de que verifique que lo que está escrito es lo correcto. Por lo general, los usuarios quitan y colocan cosas nuevas, esto debido a que a veces desean incluir mejoras; de ahí, que la validación es otra entrevista, pero con base en el documento editado.<br> - Los pasos 5 y 6 se repiten, tantas veces como sea necesario, hasta que el usuario le dé el visto bueno definitivo al documento.<br> - Para el caso de los formatos, se recomienda describir cada uno de ellos y colocar en que procesos interviene.<br><br> b) Análisis de la información Para proyecto de bases de datos, el análisis consiste en realizar el modelo de datos, con base en el levantamiento de información. Es así, como en el texto se deben identificarse los conjuntos de datos, las relaciones y los atributos. Una vez identificado y realizado el diagrama, este debe validarse con los usuarios del área. <br><br> c) Modelo Relacional Con base al modelo lógico de datos, se aplican las reglas para pasar al modelo relacional o diseño físico, en otras palabras, las entidades, relaciones y atributos se pasan a tablas y campos. <br><br> d) Implementación Una vez se tenga definida todas las tablas, con sus respectivos campos, llaves principales y llaves foráneas, se entra a definir en la herramienta de MySql. Lo anterior se realiza con las sentencias DDL (Lenguaje de Definición de datos). <br><br>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+    <footer>
+        Universidad Nacional Abierta y a Distancia - UNAD <br>Powered by <a href="https://zonadesistemas.com" target="_blank" style="color: #fff; text-decoration: underline">Enyo José Huetto</a>
+    </footer>
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

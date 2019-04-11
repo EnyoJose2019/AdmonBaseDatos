@@ -1,0 +1,57 @@
+body{
+    font-family: "verdana";
+}
+
+.banner {
+    background: url(../imgs/Portafolio.png) center;
+    background-size: cover;
+    max-height: 300px !important;
+    height: 300px !important;
+}
+
+.texto_ppal{
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 5px 5px 10px white;
+    width: 100%;
+    text-align: center;
+}
+
+.caja_lecturas {
+    background: #005883;
+    color: #fff;
+    padding: 60px 30px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    height: 200px;
+    cursor: pointer;
+}
+
+.caja_lecturas a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item {
+    margin-right: 50px;
+    font-weight: 700;
+}
+
+.logo{
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+footer{
+    text-align: center;
+    background: #005883;
+    color: #fff;
+    margin-top: 120px;
+    padding: 20px;
+}

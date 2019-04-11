@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administracion de base de datos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+    <section class="banner">
+        <div class="container">
+            <div class="row fullscreen d-flex align-items-center">
+                <div class="banner-content col-lg-12 col-md-12 justify-content-center mt-5">
+                    <h1 class="texto_ppal" style="">Administración de Base de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="index.html" class="navbar-brand logo">UNAD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav">
+                           <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="lecturas.html">LECTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="multimedia.html">MULTIMEDIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="actividades.html">ACTIVIDADES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="autores.html">AUTORES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 80px; margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header" style="background: #005883; color: #fff;">
+                        <strong>LECTURAS</strong>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <a href="sistemas-de-gesti%C3%B3n-de-base-de-datos.html"><span>SISTEMAS DE GESTIÓN </span> DE BASE DE DATOS (SGBD)</a></li>
+                        <li class="list-group-item"><a href="fundamentos-de-an%C3%A1lisis-y-dise%C3%B1o-de-bases-de-datos-relacional.html"><span>FUNDAMENTOS DE ANÁLISIS Y DISEÑO </span> DE BASES DE DATOS RELACIONAL</a></li>
+                        <li class="list-group-item"><a href="lenguaje-estandar-de-consulta-y-herramientas.html"><span>LENGUAJE ESTANDAR DE CONSULTA</span> Y HERRAMIENTAS</a></li>
+                        <li class="list-group-item"><a href="lenguaje-de-manipulacion-de-datos.html"><span>LENGUAJE DE MANIPULACIÓN DE DATOS</span></a></li>
+                        <li class="list-group-item"><a href="herramienta-mysql.html"><span>HERRAMIENTA MySQL</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9" style="text-align: justify">
+
+                <h3>LENGUAJE DE MANIPULACIÓN DE DATOS</h3>
+                <p>
+
+                    La operaciòn de inserción, es la que permite crear los datos en las bases de datos. Para garantizar el èxito de esta operaciòn, es necesarios tener en cuentas estas situaciones: <br><br> 1. La sentencia, solo permite insertar datos en UNA sola tabla.<br> 2. Como mìnimo, se debe insertar los datos de los campos que conforman la LLAVE PRIMARIA. <br> 3. Si existen campos, que no permiten valores NULOS, estos deben necesariamente, insertales valores. <br> 4. Si la tabla, donde se van a insertar los datos, contiene LLAVES FORÀNEAS, debe garantizarse que al introducir un datos, este ya este creado en la tabla padre. Por lo tanto, es conveniente que al realizar inserciones en este tipo de tablas, lo primero que se debe hacer es insertar en las tablas que no tienen LLAVES FORANEAS, es decir, que son solo padres.<br><br> Cuando se insertan datos a una base de datos, se puede hacer de dos formas:<br><br> 1. Insertando datos Fila por Fila<br><br> Se inserta la primera fila de la tabla de MUNICIPIOS y la segunda fila de la tabla de HOTELES.<br><br> INSERT INTO MUNICIPIOS (Cod_Mun,Nombre_municipio) VALUES(01,‘Bogotà'); <br> INSERT INTO HOTELES (Cod_Hot,Hnombre,Cod_Mun) VALUES('H02,‘Hilton',01);<br><br> 2. Insertando datos en varias filas<br><br> Cuando se utiliza la sentencia INSERT para agregar datos en varias filas, necesariamente se debe tomar con base en otra tabla, que tenga los campos estructurados de la misma forma de la tabla donde se va a insertar. Un ejemplo sería cargar una tabla temporal solo con los datos de número de reservas, número del huésped y fecha de reservas, cuya fecha inicial de reserva mayor a julio de 2011. <br><br> Lo anterior quedaría así: <br><br> INSERT INTO Temporal (Rnum, Nro_Id_Hues, Fecha_Ini)<br> SELECT Rnum, Nro_Id_Hues, Fecha_Ini<br> FROM RESERVAS<br> WHERE Fecha_Ini > ‘01/07/2011‘;<br> Es de aclarar, que la tabla Temporal, se ha debido crear previamente, con la sentencia CREATE.<br><br>
+
+                    <b>Actualización de Filas</b><br><br> La sentencia para actualizar se llama UPDATE. Cuando se ejecuta esta sentencia en su mínima expresión, se actualizan todas las filas. Obsérvese el siguiente ejemplo:<br><br> Actualizar el nombre del hotel ―Caribian‖, por ―Palacé‖<br><br> UPDATE HOTELES SET Hnombre = ‘Palacé’ WHERE Hnombre = ‘Caribian’:<br><br> Aquí es conveniente hacer varias precisiones. La cláusula WHERE, es opcional; si esta cláusula no se coloca, entonces todas las filas quedan con nombre “Palacé”, cosa que no es común que ocurra. En cambio, con la cláusula WHERE, solo cambia el que tiene el nombre de ‗Caribian‘, siendo así las cosas, podemos decir que la cláusula WHERE en la práctica, no es tan opcional.<br><br>
+
+                    <b>Borrado de Filas</b><br><br> La cláusula para borrar filas es DELETE. Cuando se ejecuta esta sentencia en su mínima expresión, se borran todas las filas. Obsérvese el siguiente ejemplo: Vamos a borrar todas las filas de la tabla de reservas cuya fecha de inicio son del año 2010.<br><br> DELETE FROM HOTELES WHERE CIUDAD = ‘Armenia’;<br> Aquí vale la pena hacer la misma aclaración que hicimos con UPDATE, y es que la cláusula WHERE es opcional. De tal forma, que si no se coloca, entonces BORRA TODOS LOS DATOS DE LA TABLA, pero no la estructura.<br><br>
+
+                    <b>Consultas Basicas></b><br><br> Para mirar toda la potencialidad de la sentencia SELECT, hemos organizado las consultas de menor a mayor grado de dificultad, por cuestiones pedagógicas. Comenzaremos con consultas sobre una sola tabla hasta finalizar con subconsultas, donde intervienen más de una tabla. Miremos la sentencia general <br><br> SELECT Campo1[,Campo 2, …..] <br> FROM Tabla 1[,Tabla 2, ……] <br> WHERE Condiciòn 1 [AND Condiciòn 2][OR Condiciòn 2][…….]<br> ORDER BY Campo 1 [,Campo 2, ….]<br> GROUP BY Campo 1 [,Campo 2, ….] <br> HAVING Condiciòn de Grupo [AND Condiciòn 2][OR Condiciòn 2][…….]<br><br>
+
+
+                    <b>1. Consultas simples</b><br><br> a. Consulta de un determinado campo. Consultar el código, nombre y código municipios de todos los hoteles.<br> SELECT Cod_Hot, Hnombre, Cod_Mun FROM HOTELES;<br><br> b. Consultas de todos los campos. Consultar todos los datos de los hoteles.<br> SELECT * FROM HOTELES;<br><br> c. Consultas con DISTINCT. Consultar el código de los hoteles que han tenido reservas.<br> SELECT DISTINCT Cod_Hot FROM RESERVAS; Si no se coloca la palabra DISTINCT, saldría dos veces el código H01.<br><br> d. Consultas de valores calculados. Consultar el nombre de los hoteles con sus respectivas tarifas, aumentadas en un 10%.<br> SELECT Hnombre, ―Tarifa Aumentada en 10%‖,Tarifa_Noche*1.1 FROM HOTELES;<br><br> e. Consultas con campos cualificados. Consultar el código y el nombre de los municipios.<br> SELECT MUNICIPIOS.Cod_Mun,MUNICIPIOS.Nomb_Mun<br> FROM MUNICIPIOS;<br> f. Consultas con condición. Consultar el código del hotel que han reservados en el año 2011<br> SELECT DISTINCT Cod_Hot FROM RESERVAS WHERE Fecha_Ini=‘01/01/2011‘ AND Fecha_Ini=‘31/12/2011‘;<br><br> g. Consultas con ordenamiento. Consultar el código del hotel y la fecha de reservas, organizado por código hotel.<br> SELECT DISTINCT Cod_Hot, Fec_Res FROM RESERVAS ORDER BY Cod_Hot;<br><br>
+
+                    <b>2. Consultas de Reunión</b><br><br> a. Reunión simple. Consultar el nombre de los hoteles que han tenido reservas<br> SELECT DISTINCT Hnombre FROM HOTELES,RESERVAS WHERE HOTELES.Cod_Hot=RESERVAS.Cod_Res;<br><br>
+                    <b>3. Consultas con Funciones Agregadas.</b><br><br> COUNT(*): Cuenta los registros de una tabla <br> COUNTO(Campo): Cuenta los registros por un campo determinado. Si el campo tiene un valor nulo, no lo cuenta. <br> SUM(Campo): Suma todos los valores del campo. No suma nulos. el campo debe ser numérico. <br> AVG(Campo): Promedia el campo. No tiene en cuenta los nulos y el campo debe ser numérico.<br> MAX(Campo): Selecciona el valor máximo del campo. No cuenta el valor nulo. MIN(Campo): Selecciona el valor mínimo del campo. No cuenta el valor nulo.<br><br> a. Consultas para contar filas. Consultar el número total de hoteles.<br> SELECT COUNT (*) FROM HOTELES;<br><br> b. Consultas para contar final con condición. Obtener la cantidad total de hoteles que se encuentran en el municipio H01.<br> SELECT COUNT(Cod_Hot) FROM HOTELES WHERE Cod_Mun=‘H01‘ ;<br><br> c. Consultas con agrupación. Obtener el número total de reservas por hotel<br> SELECT Cod_Hot,COUNT(Nro_Res) FROM RESERVAS GROUP BY Cod_Hot; <br><br> En la consulta anterior, cuando tenemos en la clausula SELECT campos acompañados con funciones agregadas, siempre debe agruparse por estos campos, o si no, sale error en la consulta y NO se ejecuta.<br><br> d. Consultas con agrupación y reunión de tablas. Consultar el nombre del hotel con su respectivo número total de reservas.<br> SELECT Hnombre,COUNT(Nro_Res) FROM HOTELES,RESERVAS WHERE HOTELES.Cod_Hot=RESERVAS.Cod_Hot GROUP BY Hnombre; <br><br> En esta consulta, tenemos el mismo caso de la clausula SELECT. Campos acompañados con funciones agregadas, siempre debe agruparse por ellos, o si no, sale error en la consulta y NO se ejecuta.<br><br> e. Consultas con condición de agrupación. Consultar el nombre del hotel, con su respectiva cantidad total de días reservados; solos aquellos hoteles que tienen más de dos días reservados.<br> SELECT Hnombre,SUM(Dias_Dur) FROM HOTELES,RESERVAS WHERE HOTELES.Cod_Hot=RESERVAS.Cod_Hot GROUP BY Hnombre HAVING SUM(Dias_Dur)>2; .<br> En esta consulta, tenemos el mismo caso de la cláusula SELECT. Campos acompañados con funciones agregadas, siempre debe agruparse por ellos, o si no, sale error en la consulta y NO se ejecuta. Aquí la cláusula HAVING se ejecuta después de que el motor ha hecho el agrupamiento y sumado los días de duración, es decir, esta condición es de grupo, no por fila como la WHERE .<br><br> f. Consultas con condición y agrupamiento varios. Consultar el nombre del hotel, y el nombre de los municipios, con su respectiva cantidad de reservas. Solo los hoteles del municipio de Cartagena o Bogotá, y que tengan más de 2 reservas.<br> SELECT Hnombre,Nomb_Mun,SUM(Dias_Dur)<br> FROM HOTELES,MUNICIPIOS,RESERVAS<br> WHERE HOTELES.Cod_Hot=RESERVAS.Cod_Hot<br> AND HOTELES.Cod_Mun=MUNICIPIOS.Con_Mun<br> AND (MUNICIPIOS.Nomb_Mun=‘Cartagena‘ OR<br> MUNICIPIOS.Nomb_Mun=‘Bogotá‘)
+                    <br> GROUP BY Hnombre, Nomb_Mun<br> HAVING SUM(Dias_Dur)>1;<br><br>
+
+                    <b>Consultas Avanzadas</b><br><br> a. Consultas con el operador LIKE. Consultar los hoteles cuyo nombre empiezan con la letra ‗A‘.<br> SELECT * <br> FROM HOTELES <br> WHERE Hnombre LIKE ‘A%‘ ;<br><br> b. Consultar los nombres de los hoteles cuya segunda letra sea „l‟.<br> SELECT * <br> FROM HOTOLES <br> WHERE Hnombre LIKE ‘A%‘ ;<br><br> c. Consultar los nombres de los Municipios cuya última letra sea igual a “E‟.<br> SELECT * FROM MUNICIPIOS<br> WHERE Nomb_Mun LIKE ‘%E‘ ;<br> d. Consultar los proveedores que tengan en el nombre la letra “S‟.<br> SELECT * FROM MUNICIPIOS WHERE Nomb_Mun LIKE ‘%t%‘ ;<br><br> e. Subconsultas. Consultar los hoteles que no han tenido reservas.<br> SELECT * <br> FROM HOTELES <br> WHERE Cod_Hot NOT IN (SELECT Cod_Hot FROM RESERVAS) ;<br><br> Nota: Esta consulta se puede realizar también utilizando el <br><br> EXISTS SELECT *<br> FROM HOTELES <br> WHERE NOT EXISTS (SELECT Cod_Hot FROM RESERVAS WHERE RESERVAS.Cod_Hot=HOTELES. Cod_Hot)<br>
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Universidad Nacional Abierta y a Distancia - UNAD <br>Powered by <a href="https://zonadesistemas.com" target="_blank" style="color: #fff; text-decoration: underline">Enyo José Huetto</a>
+    </footer>
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

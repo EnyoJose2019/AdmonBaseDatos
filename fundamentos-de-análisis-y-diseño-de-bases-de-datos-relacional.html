@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administracion de base de datos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+    <section class="banner">
+        <div class="container">
+            <div class="row fullscreen d-flex align-items-center">
+                <div class="banner-content col-lg-12 col-md-12 justify-content-center mt-5">
+                    <h1 class="texto_ppal" style="">Administración de Base de Datos</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="index.html" class="navbar-brand logo">UNAD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+                
+                <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav">
+                           <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="lecturas.html">LECTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="multimedia.html">MULTIMEDIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="actividades.html">ACTIVIDADES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="autores.html">AUTORES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                
+                <ul class="nav navbar-nav ml-auto">
+                   
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 80px; margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header" style="background: #005883; color: #fff;">
+                        <strong>LECTURAS</strong>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <a href="sistemas-de-gesti%C3%B3n-de-base-de-datos.html"><span>SISTEMAS DE GESTIÓN </span> DE BASE DE DATOS (SGBD)</a></li>
+                        <li class="list-group-item"><a href="fundamentos-de-an%C3%A1lisis-y-dise%C3%B1o-de-bases-de-datos-relacional.html"><span>FUNDAMENTOS DE ANÁLISIS Y DISEÑO </span> DE BASES DE DATOS RELACIONAL</a></li>
+                        <li class="list-group-item"><a href="lenguaje-estandar-de-consulta-y-herramientas.html"><span>LENGUAJE ESTANDAR DE CONSULTA</span> Y HERRAMIENTAS</a></li>
+                        <li class="list-group-item"><a href="lenguaje-de-manipulacion-de-datos.html"><span>LENGUAJE DE MANIPULACIÓN DE DATOS</span></a></li>
+                        <li class="list-group-item"><a href="herramienta-mysql.html"><span>HERRAMIENTA MySQL</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9" style="text-align: justify">
+
+                <h3>FUNDAMENTOS DE ANÁLISIS Y DISEÑO DE BASES DE DATOS RELACIONAL</h3>
+                <p>
+                    <b>Definición de modelo y modelo de datos.</b> <br><br> Se entiende por modelo, el proceso de abstraer una realidad y tratar de modelarla a través de un gráfico, fórmula matemática, prototipo, etc. Para nuestro caso, entenderemos como modelo de datos, la abstracción del mundo real de la organización en término de datos y sus relaciones, plasmada en un gráfico llamado diagrama entidad-relación. Este diagrama, es una técnica de modelado conceptual (lógico) de datos, cuya base teórica se encuentran en la teoría de conjuntos, relaciones y funciones de la ciencia de las matemáticas. Los modelos de datos aportan la base conceptual para diseñar aplicaciones que hacen un uso intensivo de datos, así como la base formal para las herramientas y técnicas empleadas en el desarrollo y uso de sistemas de información. Con respecto al diseño de bases de datos, el modelado de datos puede ser escrito así (Brodie 1984:20): "dados los requerimientos de información y proceso en una aplicación de uso intensivo de datos (por ejemplo, un sistema de información), construir una representación de la aplicación que capture las propiedades estáticas y dinámicas requeridas para dar soporte a los procesos deseados (por ejemplo, transacciones y consultas). Además de capturar las necesidades dadas en el momento de la etapa de diseño, la representación debe ser capaz de dar cabida a eventuales futuros requerimientos". Un modelo de datos es por tanto una colección de conceptos bien definidos matemáticamente que ayudan a expresar las propiedades estáticas y dinámicas de una aplicación con un uso de datos intensivo. Conceptualmente, una aplicación puede ser caracterizada por: <br><br> • Propiedades estáticas: entidades (u objetos), propiedades (o atributos) de esas entidades, y relaciones entre esas entidades. <br> • Propiedades dinámicas: operaciones sobre entidades, sobre propiedades o relaciones entre operaciones. <br> • Reglas de integridad sobre las entidades y las operaciones (por ejemplo, transacciones). <br><br> Así, un modelo de datos se distingue de otro por el tratamiento que da a estas tres categorías. El resultado de un modelado de datos es una representación que tiene dos componentes: las propiedades estáticas se definen en un esquema y las propiedades dinámicas se definen como especificaciones de transacciones, consultas e informes. <br><br> Un esquema consiste en una definición de todos los tipos de objetos de la aplicación, incluyendo sus atributos, relaciones y restricciones estáticas. Correspondientemente, existirá una reposición de información, la base de datos, que es una instancia del esquema. Un determinado tipo de procesos sólo necesita acceder a un subconjunto predeterminado de entidades definidas en un esquema, por lo que este tipo de procesos puede requerir sólo un subconjunto de las propiedades estáticas del esquema general. A este subconjunto de propiedades estáticas se le denomina sub esquema. <br><br> Una transacción consiste en diversas operaciones o acciones sobre las entidades de esquema o sub esquema. Una consulta se puede expresar como una expresión lógica sobre los objetos y relaciones definidos en el esquema; una consulta identifica un subconjunto de la base de datos. Las herramientas que se usan para realizar las operaciones de definición de las propiedades estáticas y dinámicas de la base de datos son los lenguajes de definición y manipulación de datos (DDL, DML), junto con los lenguajes de consulta (SQL). <br><br>
+
+                    <b>Modelo Entidad - Relación</b> <br><br> El modelo E-R (Entidad-Relación) es un modelo de datos conceptual de alto nivel y que se suele utilizar bastante en el diseño de bases de datos Relacional. Se basa en una percepción del mundo real que consiste en un conjunto de objetos básicos denominados entidades y relaciones, y se desarrolló para facilitar el diseño de bases de datos. <br><br> El modelo E-R crea un modelo de la realidad que se asimila a la realidad que queremos modelar, y lo hace de forma que es independiente de la implementación posterior, ofreciendo un alto nivel de abstracción, y siendo una herramienta gráfica fácil de comprender. <br><br> El resultado del modelado E-R es un diagrama E-R que representa una estructura lógica general de la base de datos. <br><br>
+
+                    <b>Definición de Entidad y notación</b> <br><br> Es una abstracción de un conjunto de cosas (objetos) del mundo real, las cuales tienen las mismas características y están sujeta a las mismas reglas. Una entidad válida, debe ser significativa para el alcance del análisis, debe tener más de una ocurrencia y cada ocurrencia debe ser ÚNICA e identificable. Ejemplos de entidad es un conjunto de personas, vehículos, computadores, oficinas, facturas, créditos, etc. cabe resaltar que muchos de estos ejemplos con conjunto arbitrarios, solo creados por la imaginación de la mente humana, con el fin de organizar por categorías las cosas que lo rodean y poder tener mejor comprensión del mundo. <br><br>
+
+                    <b>Tipos de entidades:</b> <br><br> Entidad fuerte o fundamental: es una entidad que se identifica por si sola, es decir, una o varias características (atributos) le garantiza UNICIDAD, por consiguiente, no depende de otra entidad o entidades. Gráficamente, tenemos: <br>
+                    <img src="imgs/emple.png" alt=""><br> Entidad débil: es una entidad que no se puede identificar por si sola, es decir, no existe una o varias características de la entidad que le pueda garantizar UNICIDAD, por lo tanto, depende de otra entidad y su dependencia es fuerte. Es de anotar, que en estas entidades como mínimo, una de sus características (atributos), hace parte de su CLAVE PRIMARIA. Gráficamente, tenemos a la entidad Historia del empleado. <br><br>
+                    <img src="imgs/dtl-fact.png" alt=""><br> Entidad asociativa: es una entidad débil, pero, depende de DOS o mas entidades, con el fin de garantizar unicidad. Es de anotar, que esta es la única entidad que puede o no tener características propias (atributos). Gráficamente, tenemos a la entidad Detalles de Facturas. Definición de Atributo Es una abstracción de las características que poseen todas las instancias u ocurrencias de una entidad. Estas características deben cumplir con ciertas propiedades: <br><br> • Incluir toda la información necesaria sobre la entidad. <br> • No deben colocarse atributos de otra entidad.<br> • Cada atributo debe referirse a una sola característica de la entidad.<br> • Cada atributo debe tomar sus valores independientes a los demás.<br> Dominio: es un conjunto de valores que un atributo puede tomar. Para establecer los dominios se debe tener unas reglas de aceptación por parte de los responsables de la información y además citar los documentos que sustente las reglas acordadas. Estos pueden ser de diferentes tipos.<br> • Listas: cuando se requiere que un atributo tome valores que no están comprendidos en un rango.<br> • Rango: son los valores aceptables en un intervalo continuo.<br> Atributo llave: es el conjunto de uno o más atributos, los cuales distinguen como única cada instancia u ocurrencia de una entidad.<br><br>
+
+                    <b>Definición de Relación y notación</b><br><br> Es la asociación entre dos o más instancias del mismo o diferente tipo de entidad. Éstas, son relaciones simétricas, es decir, en doble sentido, de tal forma, que si una o varias instancias u ocurrencia de la entidad A, está relacionada, con una o varias ocurrencias de la entidad B, también una o varias instancias u ocurrencia de la entidad B, está relacionada, con una o varias ocurrencias de la entidad A. Por otro lado, pueden existir relaciones entre una o varias instancias u ocurrencia de la entidad A, con una o varias instancias u ocurrencia de la entidad A, es decir, con ella misma, lo que da un subconjunto del conjunto de A, lo mismo puede ocurrir con B. <br><br>
+
+
+                    <b>Definición de Cardinalidad y notación</b><br><br> Es el establecimiento de número de instancias u ocurrencias que se relacionan. Para el establecimiento de la cardinalidad en un sentido, obsérvese en la gráfica, que siempre parte del mínimo y llega al máximo. Veamos ahora, las cuatro formas cardinales que tienen las relaciones: 1) Relación Cero a Uno (0:1): Es la relación donde para Cero instancias u ocurrencias de A, hay máximo Una instancia u ocurrencia de B. La interpretación que tiene la relación con esta cardinalidad, es que puede existir instancias u ocurrencias en B, sin necesidad de que exista instancias y ocurrencias en A. 2) Relación Uno a Uno (1:1): Es la relación donde para Una instancias u ocurrencias de A, hay máximo Una instancia u ocurrencia de B. La interpretación que tiene la relación con esta cardinalidad, es que para que exista una instancias u ocurrencias en B, hay necesidad de que exista instancias y ocurrencias en A. 3) Relación Cero a Muchos (0:N): Es la relación donde para Cero instancias u ocurrencias de A, hay máximo Muchas instancia u ocurrencia de B. La interpretación que tiene la relación con esta cardinalidad, es que puede existir una o varias instancias u ocurrencias en B, sin necesidad de que existan instancias y ocurrencias en A. 4) Relación Uno a Mucho (1:N): Es la relación donde para Una instancias u ocurrencias de A, hay máximo Muchas instancia u ocurrencia de B. La interpretación que tiene la relación con esta cardinalidad, es que, para que exista una o varias instancias u ocurrencias en B, hay necesidad de que existan una instancias y ocurrencias en A. Es importante aclarar, que la existencia de los mínimos, dependen de las políticas y normas que tiene la empresa, así por ejemplo, si la empresa determina que para incluir un empleado , debe existir el cargo para esto, entonces se hace necesario que la relación de de cargo hacia empleados, como mínimo debe existir un cargo para poder inscribir empleados (1 - N). Ahora miremos en forma gráfica como queda:
+
+
+                    <img src="imgs/cardi.png" alt="">
+
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        Universidad Nacional Abierta y a Distancia - UNAD <br>Powered by <a href="https://zonadesistemas.com" target="_blank" style="color: #fff; text-decoration: underline">Enyo José Huetto</a>
+    </footer>
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
